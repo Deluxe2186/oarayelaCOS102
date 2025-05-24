@@ -17,7 +17,7 @@ def calculate_charge():
             amount = 5000
         else:
             amount = 3500
-        msgbox.showinfo("Delivery Charge", "The delivery charge is ₦" + str(amount))
+        msgbox.showinfo("Delivery Charge", "The delivery charge is N" + str(amount))
 
     elif location == "epe":
         weight = float(weight_text)
@@ -33,7 +33,7 @@ def calculate_charge():
 # Main window
 root = tk.Tk()
 root.title("Simi Services - Delivery Checker")
-root.geometry("960x540")
+root.geometry("500x200")
 
 # Location input
 location_label = tk.Label(root, text="Enter Delivery Location (Ibeju-Lekki or Epe):")
@@ -52,7 +52,7 @@ submit_button = tk.Button(root, text="Check Price", command=calculate_charge)
 submit_button.pack(pady =10)
 
 #Styling the button widget
-submit_button.config(fg = "white", bg = "green", activebackground= "white", activeforeground= "green", height= 3, width= 20)
+submit_button.config(fg = "white", bg = "green", activebackground= "white", activeforeground= "green", font= 2)
 
 # Start GUI
 root.mainloop()
